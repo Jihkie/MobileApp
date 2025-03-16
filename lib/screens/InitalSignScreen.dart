@@ -49,7 +49,7 @@ class InitalSignScreenState extends State<InitalSignScreen> {
                 Container(
                   width: context.width(),
                   height: context.height(),
-                  color: Color(0x18141c),
+                  color: Color(0xff18141c),
                 ),
                 Column(
                   children: [
