@@ -4,6 +4,7 @@ import 'package:nb_utils/nb_utils.dart';
 import 'package:open_shock/component/BottomNavbarWidget.dart';
 import 'package:open_shock/fragments/CreatePairFragment.dart';
 import 'package:open_shock/fragments/HomeFragment.dart';
+import 'package:open_shock/fragments/BluetoothHubFragment.dart';
 import 'package:open_shock/fragments/SharedUsersFragment.dart';
 import 'package:open_shock/main.dart';
 import 'package:open_shock/utils/AppColors.dart';
@@ -21,6 +22,7 @@ class DashboardScreenState extends State<DashboardScreen> {
     HomeFragment(),
     SharedUsersFragment(),
     CreatePairFragment(),
+    BluetoothHubFragment(),
   ];
 
   @override
@@ -69,6 +71,10 @@ class DashboardScreenState extends State<DashboardScreen> {
           BottomNavyBarItem(
               icon: Icon(Icons.add_box_rounded),
               title: Text('Add New',
+                  style: boldTextStyle(color: Colors.white, size: 14))),
+          BottomNavyBarItem(
+              icon: Icon(Icons.phone_android),
+              title: Text('App Hub',
                   style: boldTextStyle(color: Colors.white, size: 14))),
         ],
       ).paddingTop(12),
