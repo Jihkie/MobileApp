@@ -9,6 +9,14 @@ import 'package:open_shock/utils/AppComman.dart';
 
 import '../component/OwnHubListComponent.dart';
 
+
+String help_msg = "Name this hub, and select your hub "
+  "running a bluetooth-compatible version of the firmware.\n"
+  "Why?: If you wish to move the hub, this would allow "
+  "you to keep the hub online without access to a wifi "
+  "network, reconfiguring to a new network, or running "
+  "a hotspot.";
+
 class BluetoothHubFragment extends StatefulWidget {
   static String tag = '/BluetoothHubFragment';
   String? title;
@@ -42,7 +50,7 @@ class BluetoothHubFragmentState extends State<BluetoothHubFragment> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: Text("Create Bluetooth Hub", style: boldTextStyle(color: white, size: 24)),
+          title: Text("Bluetooth Hub", style: boldTextStyle(color: white, size: 24)),
           centerTitle: true,
           elevation: 0,
           backgroundColor: AppContainerColor,
@@ -56,7 +64,7 @@ class BluetoothHubFragmentState extends State<BluetoothHubFragment> {
                   builder: (BuildContext context) {
                     return AlertDialog(
                       backgroundColor: AppContainerColor,
-                      content: Text("asdf", style: primaryTextStyle(color: white),)
+                      content: Text(help_msg, style: primaryTextStyle(color: white),)
                     );
                   }
                 );
